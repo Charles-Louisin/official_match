@@ -1,0 +1,124 @@
+
+.storyBox {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    /* background-color: aqua; */
+    /* position: relative; */
+}
+.storyCart {
+    height: 100%;
+    width: 200px;
+    /* margin: 0 5px; */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    /* background-color: #fff; */
+}
+.headStoryCart {
+    height: 100%;
+    width: 200px;
+    /* margin: 0 5px; */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 #888;
+}
+.myStoryCart {
+    height: 75%;
+    width: auto;
+    /* border-radius: 10px; */
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    /* background-color: peru; */
+}
+.myStoryCart p {
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+.iconAdd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+    border: 5px solid #fff;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    background-color: blue;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.imgStory {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.addStory {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(142, 142, 29);
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    cursor: pointer;
+}
+.contactStoryName {
+    width: fit-content;
+    background-color: transparent;
+    /* backdrop-filter: blur(15px); */
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 13px;
+    font-weight: bolder;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    pointer-events: none;
+}
+.myContactStoryName {
+    width: 100%;
+    background-color: transparent;
+    /* backdrop-filter: blur(15px); */
+    /* display: flex;
+    align-items: center; */
+    font-size: 13px;
+    font-weight: bolder;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    pointer-events: none;
+    text-align: center;
+    margin-bottom: 10px;
+}
