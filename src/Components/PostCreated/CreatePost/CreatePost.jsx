@@ -34,9 +34,9 @@ export default function CreatePost() {
                 </div>
 
 
-                <div>
+                {/* <div>
                     <FadeLoader color="#0867ffbb" radius={1} />
-                </div>
+                </div> */}
 
 
                 <div className={styles.addPhoto}>

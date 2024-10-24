@@ -102,7 +102,7 @@ export default function PostCreated() {
                                 </Link>
                             </p>
                             <p className={styles.timeAgo}>
-                                A l'instant
+                                Now
                             </p>
                         </div>
                         <p className={styles.textComment}>
