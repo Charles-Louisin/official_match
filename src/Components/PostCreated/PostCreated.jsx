@@ -67,7 +67,7 @@ export default function PostCreated() {
 
                     <button className={styles.postLink}>
                         <AiFillLike className={styles.postIcon} />
-                        J'aime
+                        Like
                     </button>
 
                     <button onClick={()=>setHide(!hide)} className={styles.postLink}>
