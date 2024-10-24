@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './AvatarProfil.module.css'
 import Image from 'next/image'
 import { BsCamera, BsFillCameraFill } from "react-icons/bs";

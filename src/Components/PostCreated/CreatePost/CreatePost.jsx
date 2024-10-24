@@ -1,4 +1,4 @@
-'use client'
+
 
 import React from 'react'
 import styles from './CreatePost.module.css'
@@ -9,7 +9,6 @@ import { FaUserTag } from "react-icons/fa";
 import { FaShare } from "react-icons/fa6";
 import { FaImages } from "react-icons/fa";
 import { BsXLg } from "react-icons/bs";
-import { FadeLoader } from 'react-spinners'
 
 
 export default function CreatePost() {

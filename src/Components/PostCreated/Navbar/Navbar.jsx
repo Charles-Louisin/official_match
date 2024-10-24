@@ -1,14 +1,10 @@
 'use client'
 
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './Navbar.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import Avatar from '../Avatar/Avatar'
-import { UserContext } from '../Context/UserContext'
-import { useTheme } from "next-themes";
-import { useSearchParams, useRouter } from 'next/navigation'
-import ToggleTheme from '../ToggleTheme/ToggleTheme'
 import { GrHomeRounded } from "react-icons/gr";
 import { MdGroupAdd, MdOutlineGroupAdd } from "react-icons/md";
 import { BsBell } from "react-icons/bs";
@@ -17,49 +13,17 @@ import { CiSearch } from "react-icons/ci";
 import { MdOutlineApps } from "react-icons/md";
 import { BsArrowLeft } from "react-icons/bs";
 import { IoLogOutSharp } from "react-icons/io5";
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { GrMenu } from "react-icons/gr";
 
 export default function Navbar() {
 
 
 
-  const { profile } = useContext(UserContext)
+
   const [show, setShow] = useState(false)
   const [hide, setHide] = useState(false)
-  const [search, setSearch] = useState('')
-  const [allUsers, setAllUsers] = useState([])
 
-  const router = useRouter()
-  const supabase = createClientComponentClient();
-  const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    async function getUser() {
-      const { data: { user } } = await supabase.auth.getUser()
-      setUser(user)
-
-      fetchUsers();
-    }
-
-    getUser();
-  }, [])
-
-
-  function fetchUsers() {
-    supabase.from('profiles')
-      .select('id, name, avatar')
-      .then(result => {
-        setAllUsers(result.data)
-      })
-  }
-
-  const handleSignOut = async () => {
-    await supabase.auth.signOut();
-    setUser(null)
-    router.refresh();
-  }
-
+ 
 
   return (
     <div className={styles.mainNav}>
@@ -85,7 +49,7 @@ export default function Navbar() {
           <div className={styles.containSearchBar}>
             <div className={styles.searchBar}>
               <BsArrowLeft onClick={() => setShow(!show)} className={styles.arrowIcon} />
-              <input value={search} onChange={() => setSearch(e.target.value)} className={styles.inputMain} type="search" placeholder='Rechercher dans Match...' />
+              <input className={styles.inputMain} type="search" placeholder='Rechercher dans Match...' />
               <CiSearch className={styles.iconSearchMain} />
             </div>
 
@@ -159,17 +123,12 @@ export default function Navbar() {
           </span>
           <p className={styles.appText}>Menu</p>
         </div>
-        <ToggleTheme />
+        {/* <ToggleTheme /> */}
         <div onClick={() => setHide(!hide)} className={styles.imgProfil}>
-          {profile?.avatar && (
             <div className={styles.container}>
-              <Avatar url={profile?.avatar} />
+              <Avatar />
               <span className={styles.avatarText}>Compte</span>
             </div>
-          )}
-          {!profile?.avatar && (
-            <Avatar url={'/hide-facebook-profile-picture-notification.jpg'} />
-          )}
         </div>
       </div>
       {hide && (
@@ -178,13 +137,13 @@ export default function Navbar() {
           </div>
           <div className={styles.containAccount}>
             <div className={styles.containerAccount}>
-              <Link className={styles.profilAccount} href={'/profil/' + profile?.id + '/?query=post'}>
-                <Avatar url={profile?.avatar} />
-                <p>{profile?.name}</p>
-              </Link>
+              {/* <Link className={styles.profilAccount} href={'/profil'}> */}
+                <Avatar />
+                <p>Charles Louisin</p>
+              {/* </Link> */}
             </div>
             <div className={styles.logout}>
-              <button onClick={handleSignOut} className={styles.firstNavLinks}><IoLogOutSharp className={styles.navIcons} />Deconnexion</button>
+              <button className={styles.firstNavLinks}><IoLogOutSharp className={styles.navIcons} />Deconnexion</button>
             </div>
           </div>
         </>

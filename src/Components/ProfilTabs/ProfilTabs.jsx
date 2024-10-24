@@ -1,6 +1,6 @@
-'use client'
 
-import React, { useState } from 'react'
+
+import React from 'react'
 import styles from './ProfilTabs.module.css'
 import { FaRegFileAlt } from "react-icons/fa";
 import { IoIosInformationCircleOutline } from "react-icons/io"

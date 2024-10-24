@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './ProfileContent.module.css'
 import CreatePost from '../CreatePost/CreatePost'
 import PostCreated from '../PostCreated/PostCreated'
 import { FaPenToSquare } from 'react-icons/fa6'
-import { FaRegSave } from 'react-icons/fa'
-import { TbPencilCancel } from 'react-icons/tb'
 import { FaLocationDot } from "react-icons/fa6";
 import { GoHeartFill } from "react-icons/go";
 import { BsCalendar3EventFill } from "react-icons/bs";

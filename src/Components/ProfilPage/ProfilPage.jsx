@@ -1,19 +1,14 @@
-'use client'
 
-import React, { useContext, useEffect, useState } from 'react'
+
+import React from 'react'
 import styles from './ProfilePage.module.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import CoverPage from '../Cover/Cover'
 import AvatarProfil from '../AvatarProfil/AvatarProfil'
-import { FaPenToSquare } from "react-icons/fa6";
-import { RiMessengerLine } from "react-icons/ri";
-import { IoPersonAddOutline } from "react-icons/io5";
-import { FaRegSave } from "react-icons/fa";
-import { TbPencilCancel } from "react-icons/tb";
 import ProfilTabs from '../ProfilTabs/ProfilTabs'
 import ProfileContent from '../ProfileContent/ProfileContent'
-import Preloader from '../Preloader/Preloader'
 import { BsCamera } from 'react-icons/bs'
+import { FaPenToSquare } from 'react-icons/fa6'
 
 export default function Profilpage() {
 

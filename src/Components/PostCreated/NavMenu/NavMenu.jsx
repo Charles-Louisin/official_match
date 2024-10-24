@@ -1,6 +1,6 @@
-'use client'
 
-import React, { useEffect, useState } from 'react'
+
+import React from 'react'
 import styles from './NavMenu.module.css'
 import Avatar from '../Avatar/Avatar'
 import { LiaUserFriendsSolid } from 'react-icons/lia'
@@ -13,46 +13,18 @@ import { RiMessage3Line } from 'react-icons/ri'
 import { SiGoogleclassroom } from 'react-icons/si'
 import { PiShoppingBagOpenDuotone } from 'react-icons/pi'
 import Link from 'next/link'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import Navbar from '../Navbar/Navbar'
-import { UserContextProvider } from '../Context/UserContext'
 
 export default function NavMenu() {
 
 
-    const supabase = createClientComponentClient();
-    const [user, setUser] = useState(null)
-    const [profile, setProfile] = useState(null)
-
-
-    useEffect(() => {
-        async function getUser() {
-            const { data: user } = await supabase.auth.getUser()
-            setUser(user)
-            // console.log(user.user.id);
-
-            supabase.from('profiles')
-                .select()
-                .eq('id', user?.user?.id)
-                .then(result => {
-                    if (result?.data?.length) {
-                        setProfile(result.data[0])
-
-                    }
-                })
-        }
-
-        getUser();
-
-    }, [])
-
     return (
-        <UserContextProvider>
+        <>
         <Navbar />
         <div className={styles.asideLeft}>
-            <div><Link className={styles.firstNavLinks} href={'/profil/' + profile?.id + '/?query=post'}>
-                <Avatar url={profile?.avatar} />
-                <p>{profile?.name}</p>
+            <div><Link className={styles.firstNavLinks} href={'/profil/'}>
+                <Avatar />
+                <p>Charles Louisin</p>
             </Link>
             </div>
             <div><Link className={styles.firstNavLinks} href={''}><LiaUserFriendsSolid className={styles.navIcons} />Amis</Link></div>
@@ -72,6 +44,6 @@ export default function NavMenu() {
             <div><Link className={styles.firstNavLinks} href={''}><PiShoppingBagOpenDuotone className={styles.navIcons} />Courses</Link></div>
 
         </div>
-        </UserContextProvider>
+        </>
     )
 }

@@ -1,11 +1,10 @@
 'use client'
 
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './Navbar.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import Avatar from '../Avatar/Avatar'
-// import ToggleTheme from '../ToggleTheme/ToggleTheme'
 import { GrHomeRounded } from "react-icons/gr";
 import { MdGroupAdd, MdOutlineGroupAdd } from "react-icons/md";
 import { BsBell } from "react-icons/bs";
@@ -141,9 +140,9 @@ export default function Navbar() {
           </div>
           <div className={styles.containAccount}>
             <div className={styles.containerAccount}>
-              <Link className={styles.profilAccount} href={'/'}>
+              <Link className={styles.profilAccount} href={'/profil'}>
                 <Avatar />
-                <p></p>
+                <p>Charles Louisin</p>
               </Link>
             </div>
             <div className={styles.logout}>

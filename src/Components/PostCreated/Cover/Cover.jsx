@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './Cover.module.css'
 import { BsCamera, BsFillCameraFill } from "react-icons/bs";
 import Preloader from '../Preloader/Preloader';

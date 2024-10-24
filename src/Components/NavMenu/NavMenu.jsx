@@ -1,6 +1,6 @@
-'use client'
 
-import React, { useEffect, useState } from 'react'
+
+import React from 'react'
 import styles from './NavMenu.module.css'
 import Avatar from '../Avatar/Avatar'
 import { LiaUserFriendsSolid } from 'react-icons/lia'
@@ -22,9 +22,9 @@ export default function NavMenu() {
        <>
         <Navbar />
         <div className={styles.asideLeft}>
-            <div><Link className={styles.firstNavLinks} href={'/'}>
+            <div><Link className={styles.firstNavLinks} href={'/profil'}>
                 <Avatar />
-                <p></p>
+                <p>Charles Louisin</p>
             </Link>
             </div>
             <div><Link className={styles.firstNavLinks} href={''}><LiaUserFriendsSolid className={styles.navIcons} />Amis</Link></div>

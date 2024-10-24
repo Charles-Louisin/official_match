@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './AvatarProfil.module.css'
 import Image from 'next/image'
 import { BsFillCameraFill } from "react-icons/bs";
-import Preloader from '../Preloader/Preloader';
 
 export default function AvatarProfil() {
 

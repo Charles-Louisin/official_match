@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './CardStory.module.css'
 import Image from 'next/image'
 import { MdAdd } from "react-icons/md";

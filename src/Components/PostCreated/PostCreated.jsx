@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './PostCreated.module.css'
 import Link from 'next/link'
 import Avatar from '../Avatar/Avatar'

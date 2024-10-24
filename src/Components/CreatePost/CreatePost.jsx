@@ -1,6 +1,6 @@
-'use client'
 
-import React, { useContext, useEffect, useState } from 'react'
+
+import React from 'react'
 import styles from './CreatePost.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -9,7 +9,6 @@ import { FaUserTag } from "react-icons/fa";
 import { FaShare } from "react-icons/fa";
 import { FaImages } from "react-icons/fa";
 import { BsXLg } from "react-icons/bs";
-// import { FadeLoader } from 'react-spinners'
 
 
 export default function CreatePost() {
