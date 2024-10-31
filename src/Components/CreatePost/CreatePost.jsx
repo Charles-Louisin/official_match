@@ -41,7 +41,7 @@ export default function CreatePost() {
             <div className={styles.partPostDown}>
                 <div className={styles.partLeft}>
                     <label className={styles.postLink}>
-                        <input type="file" hidden />
+                        <input type="file" hidden  />
                         <FaImages className={styles.icons} />
                         Image
                     </label>

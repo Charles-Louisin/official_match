@@ -33,9 +33,14 @@ export default function Register() {
                             <input type="email" placeholder='Homerbush@exemple.com' required />
                         </div>
                         <div className={`${styles.etape2Identifiant} ${styles.divMarge}`}>
-                            <label htmlFor="nom d'utilisateur">Mot de passe</label>
+                            <label htmlFor="mot de passe">Mot de passe</label>
                             <input type="password" placeholder='Mot de passe' required />
                         </div>
+                        <div className={`${styles.etape2Identifiant} ${styles.divMarge}`}>
+                            <label htmlFor="confirm password">Confirmer le mot de passe</label>
+                            <input type="password" placeholder='Confirmer le mot de passe' required />
+                        </div>
+
                         <button  type='button' className={styles.etape2Button}>Creer le compte</button>
                     </form>
                 </div>
